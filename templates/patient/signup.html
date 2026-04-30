@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Authorization</title>
+</head>    
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #a8c7ed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .auth-container {
+        background-color: #ffffff;
+        padding: 30px;
+        width: 400px;   /* ✅ increased width */
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+        font-size: 20px;   /* ✅ reduced size */
+        word-wrap: break-word; /* ✅ prevents cut */
+    }
+
+    form p {
+        margin-bottom: 15px;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+</style>
+<body>
+
+    <div class="auth-container">
+        <h1>DOCTOR AUTHORIZATION</h1>
+        
+        <form action="" method="post">
+            {% csrf_token %}
+            
+            {{ form.as_p }}
+
+            <input type="submit" value="REGISTER" class="submit-btn">
+        </form>
+    </div>
+
+</body>
+</html>

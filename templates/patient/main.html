@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hospital management </title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        height: 100vh;
+        background: url("https://i.pinimg.com/736x/ac/7c/d1/ac7cd1064fd0881c2338e897aaa038d5.jpg") no-repeat center center/cover;
+    }
+
+    /* Top right buttons */
+    .container {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+        width: auto;
+    }
+
+    /* Hide old heading */
+    .titles h1 {
+        display: none;
+    }
+
+    /* Main Title center */
+    body::before {
+        content: "ONLINE HEALTH CARE SYSTEM";
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 40px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+    }
+
+    /* Button style */
+    .btn {
+        display: inline-block;
+        text-decoration: none;
+        padding: 10px 18px;
+        margin-left: 10px;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+    .user-btn {
+        background-color: #3498db;
+        color: white;
+    }
+
+    .user-btn:hover {
+        background-color: #2980b9;
+    }
+
+    .signup-btn {
+        background-color: #2ecc71;
+        color: white;
+    }
+
+    .signup-btn:hover {
+        background-color: #27ae60;
+    }
+
+    /* 🔥 NEW CENTER CONTENT */
+    .center-box {
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        padding: 25px;
+        border-radius: 15px;
+
+        background: rgba(0, 0, 0, 0.4);
+        color: white;
+        text-align: center;
+
+        box-shadow: 0px 10px 25px rgba(0,0,0,0.5);
+    }
+
+    .center-box h2 {
+        margin-bottom: 10px;
+        font-size: 22px;
+    }
+
+    .center-box p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+</style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="titles">
+            <h1>DOCTOR LOGIN/SIGNUP</h1>
+        </div>
+        
+        <a href="{% url 'loginurl' %}" class="btn user-btn">USER LOGIN</a>
+        <a href="{% url 'signupurl' %}" class="btn signup-btn">CREATE ACCOUNT</a>
+    </div>
+
+    <!-- 🔥 ADDED CONTENT (no change to your code) -->
+    <div class="center-box">
+        <h2>Smart Healthcare Starts Here</h2>
+        <p>
+            <bold> BELIVE US</bold><br>
+            all in one secure platform. Improve efficiency, reduce manual work, 
+            and deliver better healthcare services.
+        </p>
+    </div>
+
+</body>
+</html>

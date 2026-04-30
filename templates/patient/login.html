@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<style>
+    /* Full page background with high-quality font */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                    url('https://i.pinimg.com/736x/c5/61/33/c56133769663ee158ad13c2418f783f4.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* The main form card */
+    form {
+        background: #ffffff;
+        padding: 40px 30px;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        max-width: 350px;
+        text-align: center;
+    }
+
+    /* Neat, professional heading */
+    h1 {
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: #1e293b;
+        margin-bottom: 30px;
+        letter-spacing: 1px;
+        border-bottom: 3px solid #6366f1; /* Indigo underline */
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+
+    /* Styling the text labels */
+    label {
+        display: block;
+        text-align: left;
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: #64748b;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+
+    /* Sleek Input Boxes */
+    input[type="text"], 
+    input[type="password"] {
+        width: 100%;
+        padding: 14px;
+        border: 2px solid #e2e8f0;
+        border-radius: 12px;
+        box-sizing: border-box;
+        font-size: 1rem;
+        background-color: #f8fafc;
+        transition: all 0.3s ease;
+    }
+
+    /* When the user clicks an input */
+    input:focus {
+        outline: none;
+        border-color: #6366f1;
+        background-color: #ffffff;
+        box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+    }
+
+    /* The Login Button */
+    input[type="submit"] {
+        width: 100%;
+        background-color: #6366f1;
+        color: white;
+        border: none;
+        padding: 15px;
+        border-radius: 12px;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #4f46e5;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+    }
+
+    /* Fixing spacing for your existing <br> tags */
+    br {
+        content: "";
+        margin: 5px 0;
+        display: block;
+    }
+</style>
+    <body>
+        <form action="" method="POST">
+            <h1>DOCTOR LOGIN PAGE</h1>
+            {%csrf_token%}
+         <label for="">
+            User_name:
+            <input type="text" name="uname">
+         </label><br><br>
+         <label for="">
+            password:
+            <input type="password" name="pwd">
+         </label><br><br>
+         <input type="submit" value="login"><br><br>
+         <a href="{% url 'optionurl' %}"></a>
+         </form>  
+        </body>
+</html>

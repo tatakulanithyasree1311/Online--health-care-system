@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Patient</title>
+</head>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #4f9acd;
+        display: flex;
+        justify-content: center;
+        align-items: 100vh;
+        margin: 0;
+    }
+   .box {
+        background-color: #b8ceee;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        width: 350px;
+    }
+    h2{
+        text-align: center;
+        margin-bottom: 20px;
+        color: #2c3e50;
+    }
+    label {
+        font-weight: bold;
+        color: #333;
+    }
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border: 1px solid #7968e7;
+        border-radius: 5px;
+        outline:none;
+        transition: 0.3s;
+    }
+    input:focus {
+        border-color:#3498db;
+        box-shadow: 0 0 5px #061119;
+    }
+    button{
+        width:100%;
+        padding:10px;
+        background-color: #1cb6bb;
+        border: none;
+        color:#dde4eb;
+        font-size:16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    button:hover{
+        background-color: #32d275;
+    }
+</style>
+<body>
+
+<div class="box">
+    <h2>UPADTE PATIENT DETAILS</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <label>Patient Id</label><br>
+        <input type="text" name="pid" value="{{ patient.pid}}"><br><br>
+
+        <label>Patient Name</label><br>
+        <input type="text" name="pname" value="{{ patient.pname }}"><br><br>
+
+        <label>Patient Address</label><br>
+        <input type="text" name="paddress" value="{{ patient.paddress }}"><br><br>
+
+        <label>Patient Phone</label><br>
+        <input type="text" name="pphone" value="{{ patient.pphone }}"><br><br>
+
+        <label>Patient Disease</label><br>
+        <input type="text" name="pdisease" value="{{ patient.pdisease }}"><br><br>
+
+        <label>Patient Email</label><br>
+        <input type="text" name="pemail" value="{{ patient.pemail }}"><br><br>
+
+        <label>Doctor Designation</label>
+        <input type="text" name="doc_designation" value="{{ patient.doc_designation }}"><br><br>
+       
+        <label>Result</label>
+        <input type="text" name="presult" value="{{ patient.presult }}"><br><br>
+        
+        <button type="submit">Update</button>
+    </form>
+
+</div>
+
+</body>
+</html>
